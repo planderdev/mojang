@@ -1,0 +1,183 @@
+<?
+include("include/head.php");
+?> 
+ 
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header align-content-center flex-wrap align-items-center justify-content-between  ">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button type="button" class="btn btn-md" onclick="window.history.back()"><span
+                            class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <div class="header_title">내가 쓴 후기</div>
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container"> 
+            <!--null-->
+            <div style="display: none;">
+                <diV class="vertical-center">
+                    <div class="w-60 text-center">
+                        <div><img src="img/3d_icon_3.png" class="w-80"></div>
+                        <div class="subtitle1 mb-4">아직 작성한 후기가 없어요.</div>
+                        <button type="button" class="btn btn-lg w-100 btn-primary"
+                            onclick="location.href='mypage_opinion.html'">
+                            후기 작성하기</button>
+                    </div>
+                </div>
+            </div>
+            <!--null--> 
+            <div class="d-flex justify-content-between align-items-center bg-light px-3 py-3">
+                <div class="flex-2 subtitle2">내가 작성한 후기 <span class="cl_primary">100</span></div>
+                <div class="flex-1">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>전체</option>
+                        <option value="1">오늘</option>
+                        <option value="2">1개월</option>
+                        <option value="3">3개월</option>
+                        <option value="4">6개월</option>
+                        <option value="5">1년</option>
+                        <option value="6">3년</option>
+                    </select>
+                </div>
+            </div> 
+            <!--db-->
+            <div class="review_list_wrap"> 
+                <div class="review_list">
+                    <div class="card">
+                        <img src="https://www.jeju-jungangh.com/kor/_wpcomm/HomeType/basic/image/content/funeral_hall01.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body w-70">
+                            <span class="badge text-bg-light mb-2">대학병원</span>
+                            <h5 class="card-title">제주대학교병원 장례식장 제주대학교병원 장례식장</h5>
+                            <p>제주특별자치도 제주시 아란13길 15</p>
+                        </div>
+                        <div class="position-absolute end-0 top-0">
+                            <div class="d-flex">
+                                <button type="button" class="btn body2 cl_disabled"
+                                    onclick="location.href='myreview_edit.html'">수정</button>
+                                <button type="button" class="btn body2 cl_pink" data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal">삭제</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review_item">
+                        <ul>
+                            <li>
+                                🤵‍♀️ 친절한 담당자/직원
+                            </li>
+                            <li>
+                                💯 전문적인 서비스
+                            </li>
+                            <li>
+                                ⭐ 깨끗한 시설
+                            </li>
+
+                            <li>
+                                📅 편리한 예약
+                            </li>
+                            <li>
+                                🚗 편한 교통 · 주차
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="review_list">
+                    <div class="card">
+                        <img src="https://www.jeju-jungangh.com/kor/_wpcomm/HomeType/basic/image/content/funeral_hall01.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body w-70">
+                            <span class="badge text-bg-light mb-2">대학병원</span>
+                            <h5 class="card-title">제주대학교병원 장례식장 제주대학교병원 장례식장</h5>
+                            <p>제주특별자치도 제주시 아란13길 15</p>
+                        </div>
+                        <div class="position-absolute end-0 top-0">
+                            <div class="d-flex">
+                                <button type="button" class="btn body2 cl_disabled"
+                                    onclick="location.href='myreview_edit.html'">수정</button>
+                                <button type="button" class="btn body2 cl_pink" data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal">삭제</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review_item">
+                        <ul>
+                            <li>
+                                🤵‍♀️ 친절한 담당자/직원
+                            </li>
+                            <li>
+                                💯 전문적인 서비스
+                            </li>
+                            <li>
+                                ⭐ 깨끗한 시설
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="review_list">
+                    <div class="card">
+                        <img src="https://www.jeju-jungangh.com/kor/_wpcomm/HomeType/basic/image/content/funeral_hall01.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body w-70">
+                            <span class="badge text-bg-light mb-2">대학병원</span>
+                            <h5 class="card-title">제주대학교병원 장례식장 제주대학교병원 장례식장</h5>
+                            <p>제주특별자치도 제주시 아란13길 15</p>
+                        </div>
+                        <div class="position-absolute end-0 top-0">
+                            <div class="d-flex">
+                                <button type="button" class="btn body2 cl_disabled"
+                                    onclick="location.href='myreview_edit.html'">수정</button>
+                                <button type="button" class="btn body2 cl_pink" data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal">삭제</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review_item">
+                        <ul>
+                            <li>
+                                🤵‍♀️ 친절한 담당자/직원
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div> 
+            <!--db--> 
+        </div>
+        <!--content e-->
+
+        <!-- delete Modal s-->
+        <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="deleteModalLabel">후기 삭제</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        이 후기를 삭제하시겠어요?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">취소</button>
+                        <button type="button" class="btn btn-link">삭제</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- delete Modal e-->
+
+        <?
+        include("include/footer.php");
+        ?>
+
+
+ 

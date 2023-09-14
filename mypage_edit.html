@@ -1,0 +1,144 @@
+<?
+include("include/head.php");
+?>
+ 
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header align-content-center flex-wrap align-items-center justify-content-between  ">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button type="button" class="btn btn-md" onclick="window.history.back()"><span
+                            class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <div class="header_title">내 정보 수정</div>
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container">
+            <div class="d-flex justify-content-between py-3 align-items-center">
+                <h2>회원정보수정</h2>
+                <button type="button" class="btn btn-sm cl_pink">탈퇴하기</button>
+            </div>
+            <div class="wrap-2">
+                <form>
+                    <div class="profile_wrap">
+                        <div class="profile_item">
+                            <div class="title">이메일<div class="cl_info body2"> * 필수항목</div>
+                            </div>
+                            <div class="txt">
+                                <div class="input-group gap-1 mb-3">
+                                    <input type="email" class="form-control" placeholder="이메일주소" aria-label="이메일주소"
+                                        disabled>
+                                    <span class="input-group-text">@</span>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option value="" disabled="" selected>선택해주세요</option>
+                                        <option value="naver.com">naver.com</option>
+                                        <option value="hanmail.net">hanmail.net</option>
+                                        <option value="daum.net">daum.net</option>
+                                        <option value="gmail.com">gmail.com</option>
+                                        <option value="nate.com">nate.com</option>
+                                        <option value="hotmail.com">hotmail.com</option>
+                                        <option value="outlook.com">outlook.com</option>
+                                        <option value="icloud.com">icloud.com</option>
+                                        <option value="_manual">직접입력</option>
+                                    </select>
+                                </div>
+                                <div class="caption1 cl_info">이메일을 변경하시려면 운영자에게 이메일을 보내주세요.</div>
+                            </div>
+                        </div>
+
+                        <div class="profile_item">
+                            <div class="title">별명<div class="cl_info body2"> * 필수항목</div>
+                            </div>
+                            <div class="txt">
+                                <input type="text" class="form-control" placeholder="별명" aria-label="별명"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+
+                        <div class="profile_item">
+                            <div class="title">성별</div>
+                            <div class="txt">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">여성</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">남성</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="profile_item">
+                            <div class="title">생년월일</div>
+                            <div class="txt">
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="profile_item">
+                            <div class="title">프로필<br>이미지</div>
+                            <div class="txt">
+
+                                <div class="file-wrapper flie-wrapper-area">
+                                    <div class="profile-upload">
+                                        <label class="form-check-label" for="file">파일선택</label>
+                                        <input type="file" name="file" id="file" class="upload-box upload-plus d-none"
+                                            accept="image/*">
+                                        <div id="preview"></div>
+                                        <div class="file-edit-icon">
+                                            <a href="#" class="preview-edit"></a>
+                                            <a href="#" class="preview-de"></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <button type="submit" class="btn btn-lg w-100 btn-primary">회원 정보 수정</button>
+                </form>
+            </div>
+
+
+        </div>
+        <!--content e-->
+
+        <script>
+            console.log()
+            function handleFileSelect(event) {
+                var input = this;
+                console.log(input.files)
+                if (input.files && input.files.length) {
+                    var reader = new FileReader();
+                    this.enabled = false
+                    reader.onload = (function (e) {
+                        console.log(e)
+                        $("#preview").html(['<img class="thumb" src="', e.target.result, '" title="', escape(e.name), '"/>'].join(''))
+                    });
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+            $('#file').change(handleFileSelect);
+            $('.file-edit-icon').on('click', '.preview-de', function () {
+                $("#preview").empty()
+                $("#file").val("");
+            });
+            $('.preview-edit').click(function () {
+                $("#file").click();
+            });
+
+
+        </script>
+        <?
+        include("include/footer.php");
+        ?>
+ 

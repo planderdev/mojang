@@ -1,0 +1,56 @@
+<?
+include("include/head.php");
+?> 
+        <!--content s-->
+        <div class="container pb-0">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-label="Basic example" style="width:84%"
+                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="d-flex flex-column px-3 pt-7 vh-100  "> 
+                <div>
+                    <h2 class="pb-8">장사 절차는 어떤것을 원하세요?</h2>
+                </div>
+                <div class="d-flex gap-3 flex-column">
+                    <input type="radio" class="btn-check" name="options" id="option12" autocomplete="off">
+                    <label class="btn btn-primary-toggle btn-lg w-100" for="option12">화장 후 자연장 (실외 - 수목장, 잔디장, 해양장 등)</label>
+
+                    <input type="radio" class="btn-check" name="options" id="option13" autocomplete="off" >
+                    <label class="btn btn-primary-toggle btn-lg w-100" for="option13">화장 후 봉안당</label>
+
+                    <input type="radio" class="btn-check" name="options" id="option14" autocomplete="off" >
+                    <label class="btn btn-primary-toggle btn-lg w-100" for="option14">화장 후 봉안당, 봉안담 (실외)</label>
+
+                    <input type="radio" class="btn-check" name="options" id="option15" autocomplete="off" >
+                    <label class="btn btn-primary-toggle btn-lg w-100" for="option15">매장 (묘)</label>
+
+                    <input type="radio" class="btn-check" name="options" id="option16" autocomplete="off" >
+                    <label class="btn btn-primary-toggle btn-lg w-100" for="option16">아직 정하지 못했어요</label>
+
+ 
+                </div>
+
+                <div class="bottom_info">
+                    <div class="subtitle4 cl_description pb-2">어떤 차이가 있을까?</div>
+                    <div class="caption1 cl_info">
+                        *봉안당 : 건축물 안에 유골함을 안치<br>
+                        *봉안담 : 건출물 밖에 탑/담 안에 유골함을 안치<br>
+                        *자연장 : 수목, 화초, 잔디, 해양등에 유골을 뿌림<br>
+                        *묘 : 관 채로 매장<br>
+                        *2019년 통계청 사회조사결과에 따르면, 우리국민은 '화장 후 자연장(수목장, 잔디장)'을 가장 선호했습니다.
+                    </div>
+                </div>
+                <div class="fixed_bottom px-3 py-3 d-flex gap-3">
+                    <button type="button" class="btn btn-lg w-50 btn-gray"
+                        onclick="location.href='write_5.html'">
+                        이전</button>
+                        <button type="button" class="btn btn-lg w-50 btn-primary"
+                        onclick="location.href='write_7.html'">
+                        다음</button>
+                </div>
+            </div> 
+        </div>
+         <!--content e--> 
+         <?
+         include("include/footer.php");
+         ?>

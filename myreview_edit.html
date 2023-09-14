@@ -1,0 +1,67 @@
+<?
+include("include/head.php");
+?>
+
+ 
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header align-content-center flex-wrap align-items-center justify-content-between  ">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button type="button" class="btn btn-md" onclick="window.history.back()"><span
+                            class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <div class="header_title">후기 작성하기</div>
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container px-3">
+            <form>
+                <div class="shadow_box">
+                    <div class="review_list pb-0">
+                        <div class="card">
+                            <img src="https://www.jeju-jungangh.com/kor/_wpcomm/HomeType/basic/image/content/funeral_hall01.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body w-70">
+                                <span class="badge text-bg-light mb-2">대학병원</span>
+                                <h5 class="card-title">제주대학교병원 장례식장 제주대학교병원 장례식장</h5>
+                                <p>제주특별자치도 제주시 아란13길 15 아란13길 15</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review_item d-flex gap-3 flex-column pt-5">
+                    <div class="subtitle1">특별히 좋았던 점을 칭찬해주세요.</div>
+                    <div>
+                        <input type="checkbox" class="btn-check" id="review-check1" autocomplete="off">
+                        <label class="btn btn-lg w-100 btn-outline-gray" for="review-check1">🤵‍♀️ 친절한 담당자/직원</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="btn-check" id="review-check2" autocomplete="off">
+                        <label class="btn btn-lg w-100 btn-outline-gray" for="review-check2">💯 전문적인 서비스</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="btn-check" id="review-check3" autocomplete="off">
+                        <label class="btn btn-lg w-100 btn-outline-gray" for="review-check3">⭐ 깨끗한 시설</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="btn-check" id="review-check4" autocomplete="off">
+                        <label class="btn btn-lg w-100 btn-outline-gray" for="review-check4">📅 편리한 예약</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="btn-check" id="review-check5" autocomplete="off">
+                        <label class="btn btn-lg w-100 btn-outline-gray" for="review-check5">🚗 편한 교통 · 주차</label>
+                    </div>
+                </div>
+                <div class="fixed_bottom bg_gradient_btn d-flex py-3 gap-3">
+                    <button type="submit" class="btn btn-primary btn-lg rounded-2 w-100">작성완료</button>
+                </div>
+            </form>
+
+        </div>
+        <!--content e-->
+        <?
+        include("include/footer.php");
+        ?>

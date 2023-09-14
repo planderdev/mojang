@@ -1,0 +1,360 @@
+<?
+include("include/head.php");
+?>
+ 
+        <!--Title Header s-->
+        <header
+            class="d-flex bg-white sticky-header align-content-center flex-wrap align-items-center justify-content-between">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button type="button" class="btn btn-md" onclick="window.history.back()"><span
+                            class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <div class="header_title">예약/결제하기</div>
+
+                </div>
+            </nav>
+        </header>
+        <!--Title Header e-->
+        <!--content s-->
+        <div class="container">
+            <section>
+                <!--step s-->
+                <div class="stepper_wrapper">
+                    <div class="stepper_item active">
+                        <div class="step_counter"><span class="material-symbols-outlined">vertical_split</span></div>
+                        <div class="step_name">장례 희망</div>
+                    </div>
+                    <div class="stepper_item active">
+                        <div class="step_counter"><span class="material-symbols-outlined">call</span></div>
+                        <div class="step_name">맞춤 상담</div>
+                    </div>
+                    <div class="stepper_item active">
+                        <div class="step_counter"><span class="material-symbols-outlined">receipt_long</span></div>
+                        <div class="step_name">예약/결제</div>
+                    </div>
+                    <div class="stepper_item">
+                        <div class="step_counter"><span class="material-symbols-outlined">minor_crash</span></div>
+                        <div class="step_name">운구</div>
+                    </div>
+                    <div class="stepper_item">
+                        <div class="step_counter"><span class="material-symbols-outlined">volunteer_activism</span>
+                        </div>
+                        <div class="step_name">장례 진행</div>
+                    </div>
+                </div>
+                <!--step e-->
+            </section>
+            <!--payment section s-->
+            <section>
+                <div class="wrap-3">
+                    <div class="subtitle1 py-4">예약하실 장례식장을 확인해 주세요.</div>
+                    <div class="payment_item pb-4">
+                        <div class="card">
+                            <img src="https://www.jeju-jungangh.com/kor/_wpcomm/HomeType/basic/image/content/funeral_hall02.jpg"
+                                class="card-img-top" alt="제주부민장례식장">
+                            <div class="card-body">
+                                <h5 class="card-title">제주부민장례식장</h5>
+                                <div class="card-text">옵션 : <span>가족장</span> / <span>3일장</span></div>
+                                <div class="price"><span>12,000,000</span>원</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-outline-dark btn-md rounded-2 w-100" data-bs-toggle="modal"
+                        data-bs-target="#detail_info">장례 상품 상세 정보</button>
+                </div>
+            </section>
+            <hr>
+            <section>
+                <div>
+                    <div class="subtitle1 py-3 pt-4">예약자 정보</div>
+                    <div class="info_list_wrap">
+                        <div class="info_list">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="flex-1 body1">
+                                    <span class="material-symbols-outlined me-2">person</span>
+                                    예약자명
+                                </div>
+                                <div class="flex-2">
+                                    이동욱
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info_list">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="flex-1 body1">
+                                    <span class="material-symbols-outlined me-2">mail</span>
+                                    이메일
+                                </div>
+                                <div class="flex-2">
+                                    plander@plander.io
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info_list">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="flex-1 body1">
+                                    <span class="material-symbols-outlined me-2">call</span>
+                                    휴대폰번호
+                                </div>
+                                <div class="flex-2">
+                                    <div class="form-floating">
+                                        <input type="number" class="form-control" id="floatingInput"
+                                            placeholder="휴대폰번호">
+                                        <label for="floatingInput">- 없이 입력해주세요. ex)01012345678</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info_box d-flex align-items-center gap-3 my-4 mx-3">
+                        <div class="icon"></div>
+                        <div class="caption1 cl_info">
+                            입력해주신 번호로 장례 진행 안내를 드릴 예정입니다.
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <section>
+                <div class="wrap-3">
+                    <div class="subtitle1 pt-2">결제 수단</div>
+                    <div class="radio_group pb-0">
+                        <input type="radio" class="btn-check" name="options" id="pay-option1" autocomplete="off">
+                        <label class="btn btn-md btn-outline-light" for="pay-option1">신용카드</label>
+                        <input type="radio" class="btn-check" name="options" id="pay-option2" autocomplete="off">
+                        <label class="btn btn-md btn-outline-light" for="pay-option2">무통장</label>
+                        <input type="radio" class="btn-check" name="options" id="pay-option3" autocomplete="off">
+                        <label class="btn btn-md btn-outline-light" for="pay-option3">계좌이체</label>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <section>
+                <div>
+                    <div class="subtitle1 py-3 pt-4">결제 정보</div>
+                    <div class="info_list_wrap">
+                        <div class="info_list">
+                            <div class="d-flex justify-content-between">
+                                <div class="flex-1 body1">
+                                    전체 금액
+                                </div>
+                                <div class="flex-1 text-end">
+                                    (예정)<span>11,000,000</span>원
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info_list">
+                            <div class="d-flex justify-content-between">
+                                <div class="flex-1 body1">
+                                    예약 금액 (10%)
+                                </div>
+                                <div class="flex-1 text-end cl_red">
+                                    <span>1,100,000</span>원
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info_list">
+                            <div class="d-flex justify-content-between">
+                                <div class="flex-1 subtitle1">
+                                    지금 결제 금액
+                                </div>
+                                <div class="flex-1 text-end fw-bold subtitle1">
+                                    <span>1,100,000</span>원
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info_box d-flex align-items-center gap-3 my-4 mx-3">
+                        <div class="icon"></div>
+                        <div class="caption1 cl_info">
+                            후불결제 시에 공제된 금액이 발생할 경우 후불결제 비용에서 차감됩니다. 추가 금액이 발생된 경우 후불결제 비용에 추가됨은 안내드립니다.
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="wrap-3 pb-8rem">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="agree">
+                    <label class="form-check-label" for="agree">
+                        주문 내용을 확인하였으며, 서비스 약관, 환불 규정, 개인 정보 처리 방침에 모두 동의합니다.
+                    </label>
+                </div>
+            </div>
+            <!--payment section e-->
+
+
+            <div class="fixed_bottom bg_gradient_btn d-flex py-3 gap-3">
+                <button type="button" class="btn btn-primary btn-lg rounded-2 w-100"
+                    onclick="location.href='opinion_success.html'"> 결제/예약 완료</button>
+            </div>
+        </div>
+        <!--content e-->  
+        <!-- detail_info modal s-->
+        <div class="modal fade" id="detail_info" tabindex="-1" aria-labelledby="detail_infoLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="detail_infoLabel">장례 상품 상세 정보</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="info_list_wrap">
+                            <div class="info_list">
+                                <div class="d-flex justify-content-between">
+                                    <div class="flex-1 subtitle1">
+                                        빈소
+                                    </div>
+                                    <div class="flex-1 subtitle1 text-end">
+                                        <span>1,200,000</span>원
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="flex-1 body1">
+                                        장례 지도사
+                                    </div>
+                                    <div class="flex-1 text-end">
+                                        <span>30</span>만 원
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="flex-1 body1">
+                                        입관 보조(염습)
+                                    </div>
+                                    <div class="flex-1 text-end">
+                                        <span>10</span>만 원
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="flex-1 body1">
+                                        접객 도우미
+                                    </div>
+                                    <div class="flex-1 text-end">
+                                        <span>30</span>만 원
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info_list">
+                                <div class="d-flex justify-content-between">
+                                    <div class="flex-1 subtitle1">
+                                        인력 서비스
+                                    </div>
+                                    <div class="flex-1 subtitle1 text-end">
+                                        <span>600,000</span>원
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="flex-1 body1">
+                                        장례 지도사
+                                    </div>
+                                    <div class="flex-1 text-end">
+                                        <span>30</span>만 원
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="flex-1 body1">
+                                        입관 보조(염습)
+                                    </div>
+                                    <div class="flex-1 text-end">
+                                        <span>10</span>만 원
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="flex-1 body1">
+                                        접객 도우미
+                                    </div>
+                                    <div class="flex-1 text-end">
+                                        <span>30</span>만 원
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info_list">
+                                <div class="d-flex justify-content-between">
+                                    <div class="flex-1 subtitle1">
+                                        고인 용품
+                                    </div>
+                                    <div class="flex-1 subtitle1 text-end">
+                                        <span>600,000</span>원
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="flex-1 body1">
+                                        장례 지도사
+                                    </div>
+                                    <div class="flex-1 text-end">
+                                        <span>30</span>만 원
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="flex-1 body1">
+                                        입관 보조(염습)
+                                    </div>
+                                    <div class="flex-1 text-end">
+                                        <span>10</span>만 원
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="flex-1 body1">
+                                        접객 도우미
+                                    </div>
+                                    <div class="flex-1 text-end">
+                                        <span>30</span>만 원
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info_list">
+                                <div class="d-flex justify-content-between">
+                                    <div class="flex-1 subtitle1">
+                                        상주 용품
+                                    </div>
+                                    <div class="flex-1 subtitle1 text-end">
+                                        <span>600,000</span>원
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="flex-1 body1">
+                                        장례 지도사
+                                    </div>
+                                    <div class="flex-1 text-end">
+                                        <span>30</span>만 원
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="flex-1 body1">
+                                        입관 보조(염습)
+                                    </div>
+                                    <div class="flex-1 text-end">
+                                        <span>10</span>만 원
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="flex-1 body1">
+                                        접객 도우미
+                                    </div>
+                                    <div class="flex-1 text-end">
+                                        <span>30</span>만 원
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info_list">
+                                <div class="d-flex justify-content-between">
+                                    <div class="flex-1 subtitle1">
+                                        합계
+                                    </div>
+                                    <div class="flex-1 text-end fw-bold subtitle1">
+                                        <span>10,052,362</span>원
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer bg-primary-lightest border-0">
+                        <button type="button" class="btn btn-lg btn-primary" data-bs-dismiss="modal">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- detail_info modal e-->
+        <?
+        include("include/footer.php");
+        ?>
